@@ -34,7 +34,7 @@ class CountdownViewController: UIViewController {
         timerLabel.isHidden = false
         countdownButton.isHidden = true
         
-        // Compte à rebours, la fonction Objective-C countdown se déclenche toute les secondes avec le paramètre timeInterval à 1.
+        // Compte à rebours, la fonction Objective-C countdown se déclenche toutes les secondes avec le paramètre timeInterval à 1.
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CountdownViewController.countdown), userInfo: nil, repeats: true)
     }
     
@@ -56,6 +56,7 @@ class CountdownViewController: UIViewController {
             timerLabel.isHidden = true
             timerLabel.text = "10" // Si on souhaite recommencer, sinon on voit "0"
             countdownTimer.invalidate() // Le compteur est désactivé.
+            countdownButton.titleLabel?.text = NSLocalizedString("countdown", comment: "Countdown button label")
         }
     }
 }
