@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countdown View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CountdownViewController" customModule="HappyNewYear2022" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyNewYearGold" translatesAutoresizingMaskIntoConstraints="NO" id="vuZ-9N-Qhp">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs8-2c-bEF">
+                                <rect key="frame" x="85" y="730" width="220" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="36C-10-s4y"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="zAO-6i-bmF"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Countdown" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" image="GoldFoil"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fireCountdown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaA-fw-v8V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LA-rN-8S2">
+                                <rect key="frame" x="146" y="368" width="98" height="108"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="90"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vuZ-9N-Qhp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="71Z-t0-Bhw"/>
+                            <constraint firstItem="zs8-2c-bEF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGW-lQ-YQx"/>
+                            <constraint firstAttribute="bottom" secondItem="vuZ-9N-Qhp" secondAttribute="bottom" id="Juy-em-fvi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zs8-2c-bEF" secondAttribute="bottom" constant="30" id="ba8-2h-vM6"/>
+                            <constraint firstItem="vuZ-9N-Qhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m66-LN-gGm"/>
+                            <constraint firstItem="vuZ-9N-Qhp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p2l-Bo-j5a"/>
+                            <constraint firstItem="3LA-rN-8S2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rNj-wG-pmT"/>
+                            <constraint firstItem="3LA-rN-8S2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wVD-gt-qxf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countdownButton" destination="zs8-2c-bEF" id="vQn-mS-W6d"/>
+                        <outlet property="timerLabel" destination="3LA-rN-8S2" id="dEU-C5-E3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+        </scene>
+        <!--Happy New Year View Controller-->
+        <scene sceneID="v7y-F3-1Cl">
+            <objects>
+                <viewController storyboardIdentifier="HappyNewYear" id="9U4-r5-dZ9" customClass="HappyNewYearViewController" customModule="HappyNewYear2022" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X4u-br-o5X">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyNewYear2022" translatesAutoresizingMaskIntoConstraints="NO" id="wfW-F7-fI7">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ks-K0-Vm8">
+                                <rect key="frame" x="15" y="59" width="69.333333333333329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Fmb-eI-ml3"/>
+                                    <constraint firstAttribute="height" constant="50" id="zeW-Pw-vhV"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30" scale="large" weight="semibold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backToCountdown:" destination="9U4-r5-dZ9" eventType="touchUpInside" id="zld-i3-d7j"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPY NEW YEAR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sS-oi-5Mi">
+                                <rect key="frame" x="40" y="350.33333333333331" width="310" height="143.33333333333331"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RoD-6h-ROq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Ks-K0-Vm8" firstAttribute="leading" secondItem="RoD-6h-ROq" secondAttribute="leading" constant="15" id="7t7-7t-wIo"/>
+                            <constraint firstItem="3sS-oi-5Mi" firstAttribute="centerY" secondItem="X4u-br-o5X" secondAttribute="centerY" id="OFB-CW-n5d"/>
+                            <constraint firstItem="3Ks-K0-Vm8" firstAttribute="top" secondItem="RoD-6h-ROq" secondAttribute="top" constant="15" id="Wpf-D9-dXa"/>
+                            <constraint firstAttribute="bottom" secondItem="wfW-F7-fI7" secondAttribute="bottom" id="YMk-YA-R2h"/>
+                            <constraint firstItem="RoD-6h-ROq" firstAttribute="trailing" secondItem="3sS-oi-5Mi" secondAttribute="trailing" constant="40" id="an8-mA-qXp"/>
+                            <constraint firstItem="3sS-oi-5Mi" firstAttribute="leading" secondItem="RoD-6h-ROq" secondAttribute="leading" constant="40" id="lRM-9q-GcN"/>
+                            <constraint firstItem="wfW-F7-fI7" firstAttribute="trailing" secondItem="RoD-6h-ROq" secondAttribute="trailing" id="lld-Ii-60b"/>
+                            <constraint firstItem="wfW-F7-fI7" firstAttribute="top" secondItem="X4u-br-o5X" secondAttribute="top" id="xVz-nD-h51"/>
+                            <constraint firstItem="wfW-F7-fI7" firstAttribute="leading" secondItem="RoD-6h-ROq" secondAttribute="leading" id="y94-hj-Twz"/>
+                            <constraint firstItem="RoD-6h-ROq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Ks-K0-Vm8" secondAttribute="trailing" symbolic="YES" id="yA3-pq-PvI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="happyNewYearLabel" destination="3sS-oi-5Mi" id="nLn-SD-Kyx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIC-I6-PbG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228.985507246377" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GoldFoil" width="900" height="569"/>
+        <image name="HappyNewYear2022" width="2475" height="4400"/>
+        <image name="HappyNewYearGold" width="2250" height="4004"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
