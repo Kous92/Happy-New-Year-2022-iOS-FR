@@ -44,10 +44,17 @@ En effectuant un push pour aller dans la seconde vue, le paramètre `modalPresen
 }
 ```
 
-**En bonus, cette application est disponible en 3 langues:**
+**En bonus, cette application est disponible en 10 langues:**
 - Français
 - Anglais
 - Arabe
+- Allemand
+- Espagnol
+- Italien
+- Japonais
+- Portugais
+- Russe
+- Turc
 
 L'internationalisation de l'application se fait grâce aux fichiers `.strings` et pour appliquer aux différents éléments, on utilise `NSLocalizedString`:
 ```swift

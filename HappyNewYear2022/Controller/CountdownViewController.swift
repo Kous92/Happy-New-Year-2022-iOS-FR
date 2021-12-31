@@ -18,7 +18,12 @@ class CountdownViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timerLabel.isHidden = true
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         countdownButton.titleLabel?.text = NSLocalizedString("countdown", comment: "Countdown button label")
+        countdownButton.isHidden = false
     }
     
     @IBAction func fireCountdown(_ sender: Any) {
@@ -39,11 +44,6 @@ class CountdownViewController: UIViewController {
         timerLabel.text = String(seconds)
         
         if seconds == 0 {
-            countdownButton.isHidden = false
-            timerLabel.isHidden = true
-            timerLabel.text = "10" // Si on souhaite recommencer, sinon on voit "0"
-            countdownTimer.invalidate() // Le compteur est désactivé.
-            
             // On s'assure que le ViewController pour l'image festive soit présente
             guard let vc = storyboard?.instantiateViewController(identifier: "HappyNewYear") as? HappyNewYearViewController else {
                 print("Erreur: ViewController non détecté dans le storyboard")
@@ -52,6 +52,10 @@ class CountdownViewController: UIViewController {
             
             vc.modalPresentationStyle = .fullScreen // Écran complet
             present(vc, animated: true) // On transite sur l'autre vue pour souhaiter "Bonne année 2022"
+            
+            timerLabel.isHidden = true
+            timerLabel.text = "10" // Si on souhaite recommencer, sinon on voit "0"
+            countdownTimer.invalidate() // Le compteur est désactivé.
         }
     }
 }
